@@ -12,7 +12,7 @@ module ActionMailer #:nodoc
 
       def initialize_template_class(assigns)
         view_path = File.dirname(Dir["#{template_path}/#{@template}.*"].first)
-        returning(template = ActionView::Base.new(view_path, assigns, self)) do
+        (template = ActionView::Base.new(view_path, assigns, self)).tap do
           template.extend ApplicationHelper
           template.extend self.class.master_helper_module
         end

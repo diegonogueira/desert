@@ -14,7 +14,7 @@ module ActionMailer #:nodoc
         view_paths = Dir[template_path].collect do |path|
           File.dirname(path)
         end
-        returning(template = ActionView::Base.new(view_paths, assigns, self)) do
+        (template = ActionView::Base.new(view_paths, assigns, self)).tap do
           template.extend ApplicationHelper
           template.extend self.class.master_helper_module
         end

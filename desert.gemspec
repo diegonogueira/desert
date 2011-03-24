@@ -2,10 +2,10 @@
 
 Gem::Specification.new do |s|
   s.name = %q{desert}
-  s.version = "0.5.4"
+  s.version = "0.5.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Pivotal Labs", "Brian Takita", "Parker Thompson", "Adam Milligan, Joe Moore"]
+  s.authors = ["Pivotal Labs", "Brian Takita", "Parker Thompson", "Adam Milligan, Joe Moore", "Diego Nogueira"]
   s.date = %q{2009-10-23}
   s.description = %q{Desert is a component framework for Rails that allows your plugins to be packaged as mini Rails apps.}
   s.email = %q{opensource@pivotallabs.com}
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     "CHANGES",
-     "MIT-LICENSE",
+     "MIT.LICENSE",
      "README.rdoc",
      "Rakefile",
      "VERSION.yml",

@@ -1,6 +1,6 @@
 class Object
   def require_with_desert(path)
-    relative_include_path = (path =~ /\.rb$/) ? path : "#{path}.rb"
+    relative_include_path = (path.to_s =~ /\.rb$/) ? path.to_s : "#{path}.rb"
     if $".include?(relative_include_path)
       return false
     else

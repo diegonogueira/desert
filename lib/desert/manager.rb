@@ -33,7 +33,7 @@ module Desert
         paths << File.join(component_root, 'app','sweepers')
         paths << File.join(component_root, 'lib')
       end
-      dependencies.load_paths.reverse_each do |path|
+      dependencies.autoload_paths.reverse_each do |path|
         paths << File.expand_path(path)
       end
       paths.uniq!
@@ -46,9 +46,9 @@ module Desert
 
       yield if block_given?
 
-      dependencies.load_paths << plugin.models_path
-      dependencies.load_paths << plugin.controllers_path
-      dependencies.load_paths << plugin.helpers_path
+      dependencies.autoload_paths << plugin.models_path
+      dependencies.autoload_paths << plugin.controllers_path
+      dependencies.autoload_paths << plugin.helpers_path
 
       @plugins_in_registration.pop
 
